@@ -23,8 +23,9 @@ namespace Snake2
             rigthline.Drow();
 
             //отрисовка точек
-            Point p1 = new Point(7, 13, '*');
-            p1.Draw();
+            Point p1 = new Point(7, 18, '*');
+            Snake snake = new Snake(p1, 4, Direction.RIGTH);
+            snake.Drow();
 
             Console.ReadLine();
         }
