@@ -28,17 +28,32 @@ namespace Snake2
             Snake snake = new Snake(p1, 4, Direction.RIGTH);
             snake.Drow();
 
+            //генерация еды
+            FoodCreator foodCreator = new FoodCreator(80, 25, '%');
+            Point food = foodCreator.CreateFood();
+            food.Draw();
+
             //движение змейки
             while (true)
             {
+                if (snake.Eat(food))
+                {
+                    food = foodCreator.CreateFood();
+                    food.Draw();
+                }
+
+                else
+                {
+                    snake.Move();
+                }
+                Thread.Sleep(120);
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.Handle(key.Key);
                 }
-                Thread.Sleep(120);
-                snake.Move();
             }          
         }
     }
 }
+
