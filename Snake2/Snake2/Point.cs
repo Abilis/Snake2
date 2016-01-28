@@ -43,7 +43,6 @@ namespace Snake2
                 y = y + offset;
             }
         }
-
         public void Draw()
         {
             Console.SetCursorPosition(x, y);

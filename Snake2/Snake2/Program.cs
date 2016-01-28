@@ -28,7 +28,6 @@ namespace Snake2
             snake.Drow();
             snake.Move();
 
-
             Console.ReadLine();
         }
     }
