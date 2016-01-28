@@ -42,6 +42,7 @@ namespace Snake2
         }
         public void Handle(ConsoleKey key)
         {
+            
             if (key == ConsoleKey.LeftArrow)
             {
                 direction = Direction.LEFT;

@@ -36,9 +36,9 @@ namespace Snake2
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.Handle(key.Key);
                 }
-                Thread.Sleep(100);
+                Thread.Sleep(120);
                 snake.Move();
-            }            
+            }          
         }
     }
 }
