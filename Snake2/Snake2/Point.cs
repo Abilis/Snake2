@@ -18,13 +18,13 @@ namespace Snake2
             y = _y;
             sym = _sym;
         }
-       public Point(Point p)
+       public Point (Point p)
         {
             x = p.x;
             y = p.y;
             sym = p.sym;
         }
-        public void Move(int offset, Direction direction)
+        public void Move (int offset, Direction direction)
         {
             if (direction == Direction.RIGTH)
             {
